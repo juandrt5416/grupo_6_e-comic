@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include('../partials/head.ejs') %>
+  <body class="product_cart">
+    <!-- Header -->
+    <%- include('../partials/header.ejs') %>
+    <main class="main">
+    <div class="box">
+      <div class="container-1">
+        <span class="icon"><i class="fa fa-search fa-2x"></i></span>
+        <input type="search" id="search" placeholder="Buscador..." />
+      </div>
+    </div>
+  </main>
+      <main class="mainbar">
+        <nav>
+          <div class="d-flex align-items-center">
+            <div class="ml-auto"> <a href="/" class="text-uppercase">Seguir comprando</a> </div>
+          </div>
+        </nav>
+        <div class="headerbar">
+          <div class="d-flex justify-content-center align-items-center pb-3">
+            <div class="px-sm-5 px-2 progressText active">CARRITO DE COMPRA<span class="fas fa-check"></span> </div>
+            <div class="px-sm-5 px-2 progressText">PAGO</div>
+            <div class="px-sm-5 px-2 progressText">FINALIZAR</div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="h5 large">Datos de envío</div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="mobile h5">Datos de envío</div>
+              <div id="details" class="detailscard">
+                <form>
+                  <fieldset id="left">
+                    <div class="form-field">
+                      <label for="firstname"><b>Nombre</b></label>
+                      <input type="text" placeholder="Ingrese el nombre" name="nombre" id="nombre"
+                        value="<%= locals.promUser ? promUser.nombre : null %>" autocomplete="off">
+                      <small></small>
+                    </div>
+                    <div class="form-field">
+                      <label for="lastname"><b>Apellidos</b></label>
+                      <input type="text" placeholder="Ingrese los apellidos" name="apellido" id="apellido"
+                        value="<%= locals.promUser ? promUser.apellido : null %>" autocomplete="off">
+                      <small></small>
+                    </div>
+                  </fieldset>
+                  <fieldset id="right">
+                    <div class="form-field">
+                      <label for="email"><b>Correo electrónico</b></label>
+                      <input type="text" placeholder="Ingrese el correo electronico" name="correoelectronico"
+                        id="correoelectronico" value="<%= locals.promUser ? promUser.correoelectronico : null %>"
+                        autocomplete="off">
+                      <small></small>
+                    </div>
+                    <div class="form-field">
+                      <label for="phonenumber"><b>Teléfono / Celular</b></label>
+                      <input type="text" placeholder="Ingrese el país" name="numerotelefono"
+                        id="numerotelefono" value="<%= locals.promUser ? promUser.numerotelefono : null %>"
+                        autocomplete="off">
+                      <small></small>
+                    </div>
+                    <div class="form-field">
+                      <label for="country"><b>País</b></label>
+                        <input type="text" placeholder="Ingrese el país" name="id_pais"
+                        id="id_pais" value="<%= locals.promUser ? promUser.pais.nombre : null %>"
+                        autocomplete="off">
+                      <small></small>
+                    </div>
+                    <div class="form-field">
+                      <label for="city"><b>Ciudad / Provincia</b></label>
+                      <input type="text" placeholder="Ingrese el ciudad/provincia" name="id_provincia"
+                      id="id_provincia" value="<%= locals.promUser ? promUser.provincia.nombre : null %>"
+                      autocomplete="off">
+                      <small></small>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="email"><b>Detalles adicionales</b></label>
+                      <textarea class="form-control"></textarea>
+                      <small></small>
+                    </div>
+                  </div> 
+              </div> 
+            <div class="col-lg-6">
+              <div id="cart" class="detailscard">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="h6">Resumen de la compra</div>
+                  <div class="h5 font-weight-bold text-primary"> <a href="/bills/billEditCRUD/1" class="text-uppercase">Modificar</a> </div>
+                </div>
+                <div class="d-flex jusitfy-content-between align-items-center pt-3 pb-2 border-bottom">
+                  <div class="item pr-2"> <img src="/images/img/01.jpg" alt="" width="99%" height="75%">
+                    <div class="number">2</div>
+                  </div>
+                  <div class="d-flex flex-column px-3"> <b class="h5 font-weight-bold">One-Punch Man, Vol. 1</b></div>
+                  <div class="ml-auto"> <b class="h5">$9.99</b> </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="display-5">Subtotal</div>
+                  <div class="ml-auto font-weight-bold">$80.9</div>
+                </div>
+                <div class="d-flex align-items-center py-2 border-bottom">
+                  <div class="display-5">Envio</div>
+                  <div class="ml-auto font-weight-bold">$12.9</div>
+                </div>
+                <div class="d-flex align-items-center py-2">
+                  <div class="display-6">Total</div>
+                  <div class="ml-auto d-flex">
+                    <div class="font-weight-bold display-7">$92.98</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row pt-lg-2 pt-1 buttons mb-sm-0 mb-1">
+                <div class="col-md-4 pt-md-0 pt-2">
+                  <a href="/products/productDetailcrud/1"><div class="btn text-white ml-auto;"> Regresar a la tienda </div></a>
+                </div>
+                <div class="col-md-4 pt-md-0 pt-2">
+                  <a href="/"><div class="btn text-white ml-auto"> Finalizar compra </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <script type="text/javascript" src="/js/search2.js"></script>
+      <!-- Footer -->
+      <%- include('../partials/footer.ejs') %>
+  </body>
+
+</html>

@@ -1,0 +1,40 @@
+{
+  "name": "grupo_6_e-comic",
+  "version": "1.0.0",
+  "description": "Proyecto integrador para el curso de fullstack con Digital House",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsebas980/grupo_6_e-comic.git"
+  },
+  "author": "grupo_6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsebas980/grupo_6_e-comic/issues"
+  },
+  "homepage": "https://github.com/jsebas980/grupo_6_e-comic#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
+    "sequelize": "^6.22.1",
+    "sequelize-automate": "^1.2.2",
+    "serve-favicon": "^2.5.0",
+    "sweetalert": "^2.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

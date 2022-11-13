@@ -1,0 +1,72 @@
+<header class="header-login-signup">
+  <section>
+    <div class="header-limiter">
+      <% if (locals.isLogged){ %>
+      <div class="has-outline">
+        <img
+          src="<% if(locals.userLogged.imagen.indexOf('https://') ) { %>
+            /images/imgUsers/<%= locals.userLogged.imagen %>
+          <% } else { %>
+            <%= locals.userLogged.imagen %>
+          <% } %>"
+          alt="eComic"
+          href="/"
+          class="code-img"
+        />
+      </div>
+      <% } else { %>
+      <div class="has-outline">
+        <img
+          src="/images/Logo_eComic_active.png"
+          alt="eComic"
+          href="/"
+          class="code-img"
+        />
+      </div>
+      <% }%>
+      <h1><a href="/">e<span>C</span>omic</a></h1>
+      <div class="menudiv">
+        <label for="toggle-1" class="toggle-menu">
+          <i class="fa-solid fa-bars fa-4x"></i>
+        </label>
+        <input type="checkbox" id="toggle-1" />
+        <nav>
+          <ul>
+            <li class="selected">
+              <a href="/"><i class="fa fa-home fa-2xl"></i></a>
+            </li>
+            <% if (locals.isLogged){ %>
+            <li><a href="/products/productCreateCRUD">Crear producto</a></li>
+            <li><a href="/products/productListCRUD">Listado producto</a></li>
+            <li><a href="/users/userCreateCRUD">Crear usuario</a></li>
+            <li><a href="/users/userListCRUD">Listado usuario</a></li>
+            <li><a href="/users/reportADMIN">Admin</a></li>
+            <% } %>
+          </ul>
+        </nav>
+        <ul class="leftdiv">
+          <% if (locals.isLogged){ %>
+          <li>
+            <a href="/products/productCart" alt="Carrito"
+              ><i class="fa-solid fa-cart-shopping fa-2xl"></i
+            ></a>
+          </li>
+          <% } %>
+          <% if (!locals.isLogged){ %>
+          <li>
+            <a href="/users/login" alt="Login" class="login"
+              ><i class="fa-solid fa-user fa-xl"></i>   Ingresar</a
+            >
+          </li>
+          <% } else { %>
+          <li>
+            <a href="/users/logout" alt="Logout" class="login"
+              ><i class="fa-solid fa-user fa-xl"></i>   Salir</a
+            >
+          </li>
+          <% }%>
+        </ul>
+      </div>
+    </div>
+  </section>
+</header>

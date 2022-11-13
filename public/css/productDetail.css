@@ -1,0 +1,269 @@
+.product_detail .card-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.product_detail .card-wrapper .card-header{
+    width: 100%;
+}
+
+.product_detail img {
+    width: 75%;
+    display: block;
+}
+
+.product_detail .img-display {
+    overflow: hidden;
+}
+
+.product_detail .img-showcase {
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.product_detail .img-showcase img {
+    min-width: 100%;
+}
+
+.product_detail .img-select {
+    display: flex;
+}
+
+.product_detail .img-item {
+    margin: 0.3rem;
+}
+
+.product_detail .img-item:nth-child(1),
+.product_detail .img-item:nth-child(2),
+.product_detail .img-item:nth-child(3) {
+    margin-right: 0;
+}
+
+.product_detail .img-item:hover {
+    opacity: 0.8;
+}
+
+.product_detail .product-content {
+    padding: 2rem 1rem;
+}
+
+.product_detail .card-header-title {
+    margin: 35px 0 55px 0;
+
+}
+
+.product_detail a.text-uppercase {
+    border: 1px solid #1f2932;
+    color: #1f2932;
+    font-weight: 600;
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    font: 700 1.2rem "Roboto Slab", sans-serif;
+    border-radius: 50px;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 250ms ease-in-out;
+    float: right;
+  }
+  
+.product_detail a.text-uppercase:hover {
+    background-color: #1f2932;
+    text-align: center;
+    color: #fff;
+  }
+
+.product_detail .product-title {
+    font-size: 3rem;
+    font-family: Adventure;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+
+.product_detail .product-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+}
+
+.product_detail .product-price {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.product_detail .product-price span {
+    font-weight: 400;
+}
+
+.product_detail .last-price span {
+    color: #f64749;
+    font-size: 18px;
+    height: 26px;
+    text-decoration: line-through;
+}
+
+.product_detail .new-price span {
+    font-size: 24px;
+    height: 32px;
+    color: #58b15d;
+}
+
+.product_detail .product-detail h2 {
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+}
+
+.product_detail .product-detail p {
+    font-size: 18px;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+
+.product_detail .product-detail ul {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.product_detail .product-detail ul li {
+    margin: 0;
+    list-style: none;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.product_detail .product-detail ul li span {
+    font-weight: 400;
+}
+
+.product_detail .action-button {
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    margin-top: 15px;
+}
+
+.product_detail .action-button.edit {
+    background-color: chocolate;
+}
+
+.product_detail .action-button.delete {
+    background-color: rgb(248, 69, 37);
+}
+
+.product_detail .purchase-info {
+    margin: 1.5rem 0;
+}
+
+.product_detail .purchase-info input,
+.product_detail .purchase-info .btn {
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.product_detail .purchase-info input {
+    width: 85px;
+}
+
+.product_detail .purchase-info .btn {
+    cursor: pointer;
+    color: #fff;
+    width: 75%;
+    text-align: center;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 10px 5px;
+    font: 700 1.2rem "Roboto Slab", sans-serif;
+    border-radius: 50px;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+.product_detail .purchase-info .btn:hover {
+    color: #1f2932;
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
+    background: linear-gradient(to right, rgba(0, 100, 200, 1), rgba(100, 200, 200, 1));
+}
+
+@media screen and (min-width: 770px) {
+    .product_detail .card-dtls {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+
+    .product_detail .card-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product_detail .product-imgs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product_detail .product-content {
+        padding-top: 0;
+    }
+}
+
+@media all and (max-width: 769px) {
+    .product_detail img {
+        width: 75%;
+        display: block;
+    }
+
+    .product_detail .img-display {
+        overflow: hidden;
+    }
+
+    .product_detail .img-showcase {
+        display: flex;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .product_detail .img-showcase img {
+        min-width: 100%;
+    }
+
+    .product_detail .img-select {
+        display: flex;
+    }
+
+    .product_detail .img-item {
+        margin: 0.2rem;
+    }
+
+    .product_detail .product-imgs {
+        width: 55%;
+        margin: auto;
+    }
+
+}
